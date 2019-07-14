@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
-  <title>Referral Codes</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Referral Codes</title>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138050396-1"></script>
 <script>
@@ -20,88 +22,39 @@
   });
 </script>
 </head>
-<style>
-table {
-  border-collapse: collapse;
-}
 
-table, td, th {
-  border: 1px solid black;
-}
-</style>
-<body>
-  <h1>Your Home for Referral Codes</h1>
- <table style="width:100%">
-  <tr>
-    <td><a title="Robinhood" href="https://share.robinhood.com/stanles139" target="_blank" rel="noopener">Robinhood</a></td>
-    <td>a free stock</td> 
-
-  </tr>
-  <tr>
-    <td><a title="Airbnb" href="https://www.airbnb.com/c/stans52" target="_blank" rel="noopener">Airbnb</a></td>
-    <td>up to $55 toward your first trip</td> 
-  </tr>
-   <tr>
-    <td><a title="Uber" href="https://www.uber.com/invite/stanleys4911ue" target="_blank" rel="noopener">Uber</a></td>
-    <td>$2 off first 3 rides</td> 
-  </tr>
-    <tr>
-    <td><a title="Wealthfront" href="https://wlth.fr/2HjEip8" target="_blank" rel="noopener">Wealthfront</a></td>
-    <td>$5000 managed for free</td> 
-  </tr>
-  <tr>
-    <td><a title="Sweatcoin" href="https://www1.sweatco.in/i/stan184802" target="_blank" rel="noopener">Sweatcoin</a></td>
-    <td>get paid to walk</td> 
-  </tr>
-    <tr>
-    <td><a title="Cardpool "href="http://refer.cardpool.com/s/Stanley41" target="_blank" rel="noopener">Cardpool</a></td>
-    <td>$5 off your first purchase</td> 
-  </tr>
-   <tr>
-    <td><a title="Square" href="https://squareup.com/i/IAMSTANLEY" target="_blank" rel="noopener">Square</a></td>
-    <td>free processing on up to $1,000 in sales</td> 
-  </tr>
-  <tr>
-    <td><a title="Lyft" href="https://www.lyft.com/idi/STANLEY18035" target="_blank" rel="noopener">Lyft</a></td>
-    <td>$10 in ride credit</td> 
-  </tr>
-  <tr>
-    <td><a title="Coinout" href="https://coinout.com/referrals/new?r=HMHMYCN" target="_blank" rel="noopener">Coinout</a></td>
-    <td>get paid to upload receipts</td> 
-  </tr>
-   <tr>
-    <td><a title="Fetch Rewards" href="https://www.fetchrewards.com" target="_blank" rel="noopener">Fetch Rewards</a> Y1CWF</td>
-    <td>$2 in credit</td> 
-  </tr>
-  <tr>
-    <td><a title="Cash App" href="https://cash.me/app/CNKJLKR" target="_blank" rel="noopener">Cash App</a></td>
-    <td>$5 when you send $5</td> 
-  </tr>
-  <tr>
-    <td><a title="Coinbase" href="https://www.coinbase.com/join/59ae05ed8ace9200cfb41deb" target="_blank" rel="noopener">Coinbase</a></td>
-    <td>$10 of free Bitcoin when you buy or sell at least $100 of cryptocurrency</td> 
-  </tr>
-  <tr>
-    <td><a title="G Suite" href="https://refergsuite.app.goo.gl/EzQe" target="_blank" rel="noopener">G Suite</a></td>
-    <td>20% off your first year</td> 
-  </tr>
-  <tr>
-    <td><a title="Ibotta" href="https://ibotta.com/r/vqdpkws" target="_blank" rel="noopener">Ibotta</a></td>
-    <td>$10 bonus for your first rebate</td> 
-  </tr>
-  <tr>
-    <td><a title="Moo" href="https://refer.moo.com/s/stanleysmall1" target="_blank" rel="noopener">Moo</a></td>
-    <td>25% off your first order</td> 
-  </tr>
-   <tr>
-    <td><a title="Plastiq" href="https://try.plastiq.com/1206695" target="_blank" rel="noopener">Plastiq</a></td>
-    <td>pay $500 without fees</td> 
-  </tr>
-    <tr>
-    <td><a title="Checkout 51" href="https://www.checkout51.com/?_branch_match_id=625001646589341103" target="_blank" rel="noopener">Checkout 51</a></td>
-    <td>get paid to upload reciepts</td> 
-  </tr>
-</table>
-</body>
+<body></body>
 
 </html>
+
+<script type="text/javascript">
+    $.getJSON('https://api.allorigins.win/get?url=' + encodeURIComponent('https://docs.google.com/spreadsheets/d/e/2PACX-1vTjaS_HBw35hM8ApEoi7_fp94UmVcPXYJu3igOWcNyf0hgqosMYzdXOugNlI52bxEUJFukhMQMeM3u8/pub?output=tsv'), function(data) {
+        var x = data.contents.split('\n');
+        for (var i = 1; i < x.length; i++) {
+            y = x[i].split('\t');
+            var a = document.createElement('a');
+            var linkText = document.createTextNode(y[0]);
+            a.appendChild(linkText);
+            a.title = y[0];
+            a.href = y[4];
+            document.body.appendChild(a);
+            document.body.appendChild(document.createElement("br"));
+        };
+    });
+</script>
+
+<style media="screen">
+    a {
+        text-align: center;
+        vertical-align: middle;
+        padding: 80px 0;
+        width: 200px;
+        margin: 10px;
+        border-style: solid;
+    }
+
+    body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+</style>
